@@ -1,9 +1,9 @@
 namespace AsyncExceptionUnhandled {
-    async function throwError(foo: number | undefined = 0): Promise<void> {
+    async function throwError(_foo: number | undefined = 0): Promise<void> {
         throw new Error("BAD TIMES");
     }
 
-    async function delay(ms: number): Promise<void> {
+    async function delay(_ms: number): Promise<void> {
         return new Promise( resolve => setTimeout(resolve, 1000) );
     }
 
@@ -14,7 +14,7 @@ namespace AsyncExceptionUnhandled {
 
         throwError().then(() => {
             console.log("This .then will not trigger")
-        }).catch((err) => {
+        }).catch((_err) => {
             console.log("Caught error from catch clause");
             // console.log(err);
         });

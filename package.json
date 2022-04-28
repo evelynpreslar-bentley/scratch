@@ -4,16 +4,20 @@
   "description": "",
   "main": "test.js",
   "scripts": {
-    "build": "tsc --strict",
-    "start": "npm run build && node ./build/possibleUndefinedCasting.js"
+    "build": "tsc",
+    "start": "npm run build",
+    "getOidcToken": "node ./lib/oidcSigninTool.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@itwin/core-bentley": "^3.1.3",
+    "@itwin/oidc-signin-tool": "^3.4.0",
     "@types/async-lock": "^1.1.1",
     "@types/node": "10.14.1",
-    "typescript": "^3.4.1",
-    "@itwin/oidc-signin-tool": "^3.4.0"
+    "dotenv": "^16.0.0",
+    "dotenv-expand": "^8.0.3",
+    "typescript": "^4.6.3"
   },
   "dependencies": {
     "async-lock": "^1.2.0"

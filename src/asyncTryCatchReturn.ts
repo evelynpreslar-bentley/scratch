@@ -3,7 +3,7 @@ const waitResolve = async (ms: number): Promise<void> => {
 };
 
 const waitReject = async (ms: number): Promise<void> => {
-  return new Promise<void>((resolve: any, reject: any) => setTimeout(reject, ms));
+  return new Promise<void>((_resolve: any, reject: any) => setTimeout(reject, ms));
 }
 
 const testGoodForm = async (callback: (ms: number) => Promise<void>): Promise<void> => {
